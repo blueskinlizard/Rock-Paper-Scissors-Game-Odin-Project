@@ -5,11 +5,13 @@
     padding: 30px;
 }
 #scissorsButton{
-
+    background-color: maroon;
 }
 #paperButton{
 
+
 }
 #rockButton{
-
+    background-color: grey;
+    border-radius: 50%;
 }
