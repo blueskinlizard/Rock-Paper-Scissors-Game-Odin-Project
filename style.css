@@ -1,0 +1,15 @@
+#rockButton, #paperButton, #scissorsButton {
+    border: 3px solid black;
+    display: inline;
+    margin-right: 30px;
+    padding: 30px;
+}
+#scissorsButton{
+
+}
+#paperButton{
+
+}
+#rockButton{
+
+}
