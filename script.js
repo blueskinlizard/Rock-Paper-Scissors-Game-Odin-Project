@@ -5,11 +5,11 @@ const titleResult = document.querySelector("#titleResult");
 const playerScoreOutput = document.querySelector("#player-score");
 const computerScoreOutput = document.querySelector("#computer-score");
 let y = null;
-let playerScore = 0;
+let playerScore=0;
 let computerScore = 0;
 let roundsPlayed = 1;
 function aiAssign(){
-    return Math.floor(Math.random() * 3)
+    return Math.floor(Math.random() * 3)    
 }
 
 //0 is rock, 1 is paper, and 2 is scissors
@@ -52,9 +52,12 @@ function calculateWin(y, t, x){
         return 1;
     }
     //all win contingencies
-    titleResult.textContent = "You lost to the AI";
-    computerScore++;
-    return 0;
+    else{
+        titleResult.textContent = "You lost to the AI";
+        computerScore++;
+        return 0;
+    }
+    
     //no wins drawn or draws made, so automatic loss
 }
 function playGame(){
@@ -62,9 +65,9 @@ function playGame(){
     rockButtonAi.setAttribute("id", "rockButton-ai");
     paperButtonAi.setAttribute("id", "paperButton-ai");
     scissorsButtonAi.setAttribute("id", "scissorsButton-ai");
-    playerScoreOutput.textContent = "Player Score: " + playerScore;
-    computerScoreOutput.textContent = "Computer Score: " + computerScore;
+    
     let x = aiAssign();
     calculateWin(y, stringAssign(x), x);
-
+    playerScoreOutput.textContent = "Player Score: " + playerScore;
+    computerScoreOutput.textContent = "Computer Score: " + computerScore;
 }
