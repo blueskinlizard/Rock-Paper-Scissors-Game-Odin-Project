@@ -2,15 +2,34 @@
 <html lang="en">
 <head> 
     <link href="style.css" rel="stylesheet">
-
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    <button id="rockButton" onclick="rockMethod()">Rock</button>
-    <button id="paperButton" onclick="paperMethod()">Paper</button>
-    <button id="scissorsButton" onclick="scissorsMethod()">Scissors</button>
-    <script src="script.js"></script>
+    <div class="select-box">
+        <h1>Your Move:</h1>
+        <div class="select-box-border">
+            <button id="rockButton" onclick="rockMethod()">🪨</button>
+        <button id="paperButton" onclick="paperMethod()">📄</button>
+        <button id="scissorsButton" onclick="scissorsMethod()">✂️</button>
+        </div>    
+    </div>
+    <div class="select-box-ai">
+        <h1>Computer's Move:</h1>
+        <div class="select-box-border-ai">
+            <button id="rockButton-ai">🪨</button>
+        <button id="paperButton-ai">📄</button>
+        <button id="scissorsButton-ai">✂️</button>
+        </div>    
+    </div>
+    <p id="titleResult"></p>
+    <div class="score-card">
+        <p id="player-score">Player Score:</p>
+        <p id="computer-score">Computer Score: </p>
+    </div>
+    <script src="script.js" defer></script>
+   
 </body>
 </html>
